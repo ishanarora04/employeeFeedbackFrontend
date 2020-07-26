@@ -53,11 +53,17 @@ export default class Feedback extends React.Component {
         <option value={elem._id}>{elem.email}</option>
       );
     }
+    let text = ``;
+    if (this.state.employees.length == 0){
+        text = 'No employees left for feedback';
+    }
+
     return (
       <div className="card">
         <tr style={{ textAlign: "right" }}>
           <a href="/app">App</a>
         </tr>
+        {text}
         <form onSubmit={this.handleSubmit} id="feedbackForm">
           <div className="">
             <label>Employee List:</label>
