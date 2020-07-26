@@ -42,7 +42,7 @@ export default class EmployeeForm extends React.Component {
             </label>
           </div>
           <div>
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Add Employee" />
           </div>
         </form>
       </div>

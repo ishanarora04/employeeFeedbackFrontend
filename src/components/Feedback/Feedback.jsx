@@ -12,7 +12,7 @@ export default class Feedback extends React.Component {
   }
 
   fetchEmployeesToAssign = () => {
-    const apiUrl = "http://localhost:3001/v1/fetchEmployeesToAssign?emp_id=5f1d6c1321c54464a647fbc8";
+    const apiUrl = "https://tranquil-taiga-11364.herokuapp.com/v1/fetchEmployeesToAssign?emp_id=5f1d6c1321c54464a647fbc8";
     fetch(apiUrl)
       .then((response) => response.json())
       .then((response) =>
@@ -34,7 +34,7 @@ export default class Feedback extends React.Component {
 
   handleSubmit = async (e) => {
     e.preventDefault();
-    const url = "http://localhost:3001/v1/feedback";
+    const url = "https://tranquil-taiga-11364.herokuapp.com/v1/feedback";
     const entity = {
       from: "5f1d6c1321c54464a647fbc8",
       to: this.state.name,
@@ -64,6 +64,7 @@ export default class Feedback extends React.Component {
           <a href="/app">App</a>
         </tr>
         {text}
+        <hr/>
         <form onSubmit={this.handleSubmit} id="feedbackForm">
           <div className="">
             <label>Employee List:</label>

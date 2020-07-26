@@ -19,7 +19,7 @@ class App extends React.Component {
   };
 
   fetchEmployees = () => {
-    const apiUrl = "http://localhost:3001/v1/fetchEmployees";
+    const apiUrl = "https://tranquil-taiga-11364.herokuapp.com/v1/fetchEmployees";
     fetch(apiUrl)
       .then((response) => response.json())
       .then((response) =>
@@ -30,7 +30,7 @@ class App extends React.Component {
   };
 
   delete = async (elem) => {
-    const url = `http://localhost:3001/v1/employee`;
+    const url = `https://tranquil-taiga-11364.herokuapp.com/v1/employee`;
     const data = { _id: elem };
     let output = await RequestManager.deleteEntity(url, data);
     if (output.status === 200) {
