@@ -18,7 +18,7 @@ export default class EmployeeForm extends React.Component {
 
   handleSubmit = async (e) => {
     e.preventDefault();
-    const url = "http://tranquil-taiga-11364.herokuapp.com/v1/employee";
+    const url = "https://tranquil-taiga-11364.herokuapp.com/v1/employee";
     const entity = { name: this.state.name, email: this.state.email };
     const employee = await RequestManager.submitEntity(url, entity);
     document.getElementById("employeeForm").reset();

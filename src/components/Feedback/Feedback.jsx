@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import RequestManager from "../../lib/RequestManager";
+import { Link } from "react-router-dom";
 
 export default class Feedback extends React.Component {
   constructor(props) {
@@ -61,7 +62,7 @@ export default class Feedback extends React.Component {
     return (
       <div className="card">
         <tr style={{ textAlign: "right" }}>
-          <a href="/app">App</a>
+          <Link  to={{pathname: '/app'}}>Home</Link>
         </tr>
         {text}
         <hr/>

@@ -8,7 +8,7 @@ import Feedback from './components/Feedback/Feedback';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route path={"/feedback"} >
           <Feedback />
@@ -17,7 +17,7 @@ ReactDOM.render(
           <App />
         </Route>
       </Switch>
-    </Router>
+    </Router> 
   </React.StrictMode>,
   document.getElementById('root')
 );

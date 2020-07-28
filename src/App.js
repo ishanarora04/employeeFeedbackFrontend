@@ -4,6 +4,7 @@ import Table from "./components/Table";
 import Button from "./components/Button";
 import RequestManager from "./lib/RequestManager";
 import EmployeeForm from "./components/Form";
+import { Link } from "react-router-dom";
 
 class App extends React.Component {
   constructor() {
@@ -66,7 +67,7 @@ class App extends React.Component {
       <div className="App">
         <table>
           <tr style={{ textAlign: "right" }}>
-            <a href="/feedback">Feedback</a>
+            <Link  to={{pathname: '/feedback'}}>Feedback</Link>
           </tr>
           <tr>
             <Table headings={headings} rows={rows} />
